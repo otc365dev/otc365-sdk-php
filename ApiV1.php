@@ -2,6 +2,10 @@
 
 require_once('Utils.php');
 
+/**
+ * v1 版本使用的是对称签名，支持md5,sha256
+ * v1 版本后续会废弃掉，建议用v2 版本api
+ */
 class ApiV1{
     
     private $secretKey;
