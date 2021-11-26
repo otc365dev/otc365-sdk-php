@@ -23,7 +23,7 @@ function testApiV1AddOrder(){
     $params['total'] = 200;
     $params['orderPayChannel'] = 3;
     $params['payCoinSign'] = 'cny';
-    $params['companyId'] = '12511234561';
+    $params['companyId'] = '12511234561'; //merchantId
     $params['orderTime'] = time()*1000; //milli seconds
     $params['orderType'] = 1; //1 add buy order,2 sell order
     $params['signType'] = 0;
