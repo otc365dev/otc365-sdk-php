@@ -11,7 +11,6 @@ function testGetBaseString(){
 
 function testApiV1AddOrder(){
 
-    $params['username'] = 'haha';
     $params['areaCode'] = "86";
     $params['phone'] = '18900000008';
     $params['idCardType'] = 1;
@@ -19,8 +18,8 @@ function testApiV1AddOrder(){
     $params['kyc'] = 2;
     $params['companyOrderNum'] = microtime(); //need to be unique
     $params['coinSign'] = 'USDT';
-    $params['coinAmount'] = 20;
-    $params['total'] = 200;
+    $params['coinAmount'] = '20'; // string type is recommandation
+    $params['total'] = '200'; // string type is recommandation
     $params['orderPayChannel'] = 3;
     $params['payCoinSign'] = 'cny';
     $params['companyId'] = '12511234561'; //merchantId
