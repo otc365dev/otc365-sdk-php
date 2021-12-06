@@ -9,6 +9,9 @@ function getBaseString($params) {
     foreach ($params as $k => $v) {
         $i++;
 
+        if($v == null || $v == ''){
+            continue;
+        }
         if($i == $len){
             $baseString.=$k."=".$v;
         }else{
