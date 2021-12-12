@@ -11,6 +11,7 @@ function testGetBaseString(){
 
 function testApiV1AddOrder(){
 
+    $params['username'] = 'haha';
     $params['areaCode'] = "86";
     $params['phone'] = '18900000008';
     $params['idCardType'] = 1;

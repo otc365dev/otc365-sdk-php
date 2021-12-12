@@ -1,6 +1,17 @@
 <?php
 
+
+function removeNullValue(&$params){
+    foreach ($params as $k => $v) {
+        if($v == null || $v == ''){
+            unset($params[$k]);
+        }
+    }
+}
+
 function getBaseString($params) {
+
+    removeNullValue($params);
 
     ksort($params);
     $baseString = '';
@@ -8,10 +19,6 @@ function getBaseString($params) {
     $i = 0;
     foreach ($params as $k => $v) {
         $i++;
-
-        if($v == null || $v == ''){
-            continue;
-        }
         if($i == $len){
             $baseString.=$k."=".$v;
         }else{
